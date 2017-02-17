@@ -14,4 +14,7 @@ Vagrant.configure("2") do |config|
     chef.add_recipe "golang"
   end
 
+  # Use script to install everything else
+  config.vm.provision "shell", path: "./provision.sh"
+
 end
