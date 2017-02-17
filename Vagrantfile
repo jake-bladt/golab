@@ -16,5 +16,4 @@ Vagrant.configure("2") do |config|
 
   # Use script to install everything else
   config.vm.provision "shell", path: "./provision.sh"
-
 end
