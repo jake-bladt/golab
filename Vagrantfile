@@ -9,4 +9,9 @@ Vagrant.configure("2") do |config|
     config.vm.network :forwarded_port, guest: i, host: i
   end
 
+  # Use chef to install go
+  config.vm.provision "chef_solo" do |chef|
+    chef.add_recipe "golang"
+  end
+
 end
