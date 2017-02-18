@@ -10,8 +10,9 @@ apt-get install -y nfs-common portmap
 
 # install go
 wget https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz
+tar -C /usr/local -xzf go1.8.linux-amd64.tar.gz
 
-# configure golang
+# configure golang for vagrant user
 su vagrant -c "echo 'GOROOT=/usr/local/go' >> ~/.profile"
 su vagrant -c "echo 'GOPATH=/home/vagrant/gocode' >> ~/.profile"
 su vagrant -c "echo 'GOBIN=\$GOPATH/bin' >> ~/.profile"
