@@ -19,5 +19,5 @@ echo GOPATH=/gopath >> /etc/environment
 echo GOBIN=/gopath/bin >> /etc/environment
 
 # add golang to path for vagrant and root
-su vagrant -c "echo 'PATH=\$PATH:\$GOBIN' >> ~/.profile"
-echo PATH=$PATH:$GOBIN >> ~/.profile
+su vagrant -c "echo 'PATH=\$PATH:\$GOBIN:\$GOROOT/bin' >> ~/.profile"
+echo PATH=$PATH:$GOBIN:$GOROOT/bin >> ~/.profile
